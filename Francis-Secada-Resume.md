@@ -4,17 +4,16 @@ New York, NY | [linkedin.com/in/francissecada](https://www.linkedin.com/in/franc
 
 ## Professional Summary
 
-Backend engineer with 10+ years in data and backend engineering, building APIs, microservices, and data pipelines across financial services, healthcare, cybersecurity, and media. Expert in Python (FastAPI, Django, Flask) and PostgreSQL, with production experience in event-driven systems on AWS, performance work on high-volume services, and LLM engineering across commercial APIs and locally hosted open-weight models. Most recently a technical lead at The Motley Fool (100+ merged PRs across 11 production repositories). Maintainer of two open-source Python libraries on PyPI. Principal of FJS Services Inc. since 2014, delivering full-stack systems for startups and small businesses.
+Backend engineer with 10+ years in data and backend engineering, building APIs, microservices, and data pipelines across financial services, healthcare, cybersecurity, and media. Expert in Python (FastAPI, Django, Flask) and PostgreSQL, with production experience in event-driven systems on AWS, performance work on high-volume services, and LLM engineering across commercial APIs and locally hosted open-weight models. Most recently a technical lead at The Motley Fool (100+ merged PRs across 11 production repositories). Maintainer of four open-source Python packages on PyPI. Principal of FJS Services Inc. since 2014.
 
 ## Technical Skills
 
 - **Languages:** Python (expert, 7+ yrs), TypeScript/JavaScript (React, Vue.js, HTMX), SQL (PostgreSQL), Rust (secondary)
 - **Backend & APIs:** FastAPI, Django/Django Ninja/DRF, Flask, Litestar, SQLAlchemy/SQLModel, REST API design, microservices, service decomposition
 - **Distributed Systems:** AWS EventBridge/SQS, Temporal (durable workflows), Celery/Taskiq, asyncio, event-driven pipelines
-- **Data:** PostgreSQL (CTEs, window functions, `DISTINCT ON`, bulk upsert, indexing), Redis, MongoDB, Pandas, ETL pipelines
+- **Data & Domain:** PostgreSQL (CTEs, window functions, `DISTINCT ON`, bulk upsert, indexing), Redis, MongoDB, Pandas, ETL; HIPAA/HITECH, RBAC, audit logging
 - **Cloud & DevOps:** AWS (ECS, Lambda, EventBridge, SQS, RDS, S3), Azure (Functions, API Management, DevOps), Docker, Kubernetes, Terraform, GitHub Actions, DataDog, Prometheus/Grafana
 - **AI/LLM:** Multi-provider LLM routing across OpenAI (GPT-4o), Claude (API, Claude Code), and OpenRouter; open-weight models served locally with Ollama (Qwen2.5-Coder, DeepSeek-R1); ComfyUI and LoRA image-generation pipelines; Pydantic AI; MCP server authorship
-- **Domain:** HIPAA/HITECH, RBAC, audit logging, financial services and regulatory reporting
 
 ## Professional Experience
 
@@ -38,8 +37,7 @@ Technical lead across production Django and FastAPI services for portfolio data,
 
 Independent consultancy building software for startups, small businesses, and nonprofits in fintech, healthcare, and SaaS.
 
-- Designed, built, and deployed 15+ full-stack web applications and API services, from MVP through production, in Python (FastAPI, Flask, Django) on AWS and GCP, with containerized CI/CD (Docker, Kubernetes, GitHub Actions, Azure DevOps).
-- Worked directly with founders and product owners on stack selection, architecture, and roadmap priorities for early-stage products.
+- Designed, built, and deployed 15+ full-stack web applications and API services for founders and product owners, from MVP through production, in Python (FastAPI, Flask, Django) on AWS and GCP, with containerized CI/CD (Docker, Kubernetes, GitHub Actions, Azure DevOps).
 - Built ETL pipelines, automation workflows, and AI features using OpenAI integrations, vector databases, and event-driven architectures.
 - Built HIPAA-compliant healthcare data platforms and portfolio-tracking and compliance-monitoring tools for boutique investment firms.
 
@@ -64,13 +62,19 @@ Independent consultancy building software for startups, small businesses, and no
 
 ## Selected Projects
 
-**TextSpitter** ([PyPI](https://pypi.org/project/TextSpitter/), [GitHub](https://github.com/fsecada01/TextSpitter)) - Python library for text extraction from PDF, DOCX, CSV, and 50+ source-code formats. Version 2.0 added a Rust/PyO3 core with a pure-Python fallback. 70+ tests on a Python 3.12-3.14 CI matrix. Maintained since 2018. *(Python, Rust, PyMuPDF)*
+**TextSpitter** ([PyPI](https://pypi.org/project/TextSpitter/), [GitHub](https://github.com/fsecada01/TextSpitter)) - Python library for text extraction from PDF, DOCX, CSV, and 50+ source-code formats. Version 2.0 added a Rust/PyO3 core with a pure-Python fallback. 70+ tests on a 3.12-3.14 CI matrix. Maintained since 2018. *(Python, Rust, PyMuPDF)*
 
 **SQLModel CRUD Utilities** ([PyPI](https://pypi.org/project/sqlmodel-crud-utilities/), [GitHub](https://github.com/fsecada01/SQLModel-CRUD-Utilities)) - Sync and async CRUD layer over SQLModel and SQLAlchemy: transaction context managers, soft deletes, pagination, audit mixins, typed exceptions. *(Python, SQLModel, PostgreSQL)*
 
-**Ouroboros** - Unattended optimization agent that profiles Python and C++ hot paths, asks an LLM to rewrite them in Rust (PyO3 bindings or C FFI), and benchmarks each candidate in a fresh subprocess after re-verifying correctness in a sandboxed Docker container. It commits only rewrites that clear a 1.5x speedup threshold. A router assigns each task tier to Claude, OpenRouter, or local Ollama models (Qwen2.5-Coder for codegen, DeepSeek-R1 for reasoning) served from a self-hosted GPU box, with a swappable slot for a code-specialist model. About 16K lines of Python and 630+ tests. *(Python, Rust, C++, Ollama, OpenRouter, Docker)*
+**Component Framework** ([PyPI](https://pypi.org/project/component-framework/), [GitHub](https://github.com/fsecada01/component-framework)) and **cf-ui** ([PyPI](https://pypi.org/project/cf-ui/), [GitHub](https://github.com/fsecada01/component-framework-ui)) - Server-driven UI components for FastAPI, Django, Litestar, and Flask in the style of Phoenix LiveView: Python classes own state and events, and HTMX handles the client wiring with no JavaScript build step. The companion kit has 14 components themed for Bulma, Bootstrap, Foundation, Fomantic UI, or DaisyUI. *(Python, HTMX, Jinja2, django-cotton)*
 
-**previz-engine** - Batch image-generation harness for a local ComfyUI running open-weight diffusion models with LoRA checkpoints. A content-addressed job index skips work already rendered, artifact hashes detect drift, an append-only log survives a kill mid-write, and a validator rejects NaN-corrupted LoRA checkpoints. Served to Claude through an MCP service with its own OAuth 2.1 authorization server. About 12K lines of Python and 390 tests. *(Python, ComfyUI, pydantic, MCP)*
+**midi-drums** ([GitHub](https://github.com/fsecada01/midi-drums)) - Drum-track generator with genre and style presets, drummer imitations, humanization, EZDrummer 3 MIDI mapping, a CLI, and Reaper integration. 690+ tests. *(Python, MIDI, Pydantic AI)*
+
+**Bus Channel Strip** ([GitHub](https://github.com/fsecada01/bus_channel_strip)) - VST3 and CLAP plugin for the mix bus with seven reorderable DSP modules, including an Airwindows-based compressor and a dynamic EQ with sidechain. Builds for Windows, macOS, and Linux. *(Rust, NIH-Plug, DSP)*
+
+**Ouroboros** - Unattended optimization agent that profiles Python and C++ hot paths, asks an LLM to rewrite them in Rust (PyO3 bindings or C FFI), and benchmarks each candidate in a fresh subprocess after re-verifying correctness in a sandboxed Docker container. It commits only rewrites that clear a 1.5x speedup threshold. A router assigns each task tier to Claude, OpenRouter, or local Ollama models (Qwen2.5-Coder for codegen, DeepSeek-R1 for reasoning) served from a self-hosted GPU box. About 16K lines of Python and 630+ tests. *(Python, Rust, C++, Ollama, OpenRouter, Docker)*
+
+**previz-engine** - Batch image-generation harness for a local ComfyUI running open-weight diffusion models with LoRA checkpoints. A content-addressed job index skips work already rendered, artifact hashes detect drift, an append-only log survives a kill mid-write, and a validator rejects NaN-corrupted LoRA checkpoints. Served to Claude through an MCP service with OAuth 2.1. About 12K lines of Python and 390 tests. *(Python, ComfyUI, pydantic, MCP)*
 
 **Ranked Jobs** ([rankedjobs.com](https://www.rankedjobs.com/)) - Job-search platform that ranks postings with NLP; its API microservice aggregates 12 sources through a plugin system, with Taskiq workers and Prometheus metrics. *(Python, FastAPI, Django, PostgreSQL, Redis)*
 

@@ -42,7 +42,18 @@ Reach out about these if you:
 
 For anything that does not fit an issue, use the contact form on [francissecada.com/contact](https://francissecada.com/contact).
 
-## Open-source Python libraries
+## Open-source software
+
+Python packages on PyPI:
 
 - [TextSpitter](https://github.com/fsecada01/TextSpitter) ([PyPI](https://pypi.org/project/TextSpitter/)): text extraction from PDF, DOCX, CSV, and source-code files, with a Rust core.
 - [SQLModel CRUD Utilities](https://github.com/fsecada01/SQLModel-CRUD-Utilities) ([PyPI](https://pypi.org/project/sqlmodel-crud-utilities/)): sync and async CRUD helpers for SQLModel and SQLAlchemy.
+- [Component Framework](https://github.com/fsecada01/component-framework) ([PyPI](https://pypi.org/project/component-framework/), [docs](https://fsecada01.github.io/component-framework/)): server-driven UI components for FastAPI, Django, Litestar, and Flask, in the style of Phoenix LiveView. State and events live in Python classes and HTMX does the client wiring. Beta; the API can still change before 1.0.
+- [cf-ui](https://github.com/fsecada01/component-framework-ui) ([PyPI](https://pypi.org/project/cf-ui/), [docs](https://fsecada01.github.io/component-framework-ui/)): a UI kit for Component Framework with 14 components themed for Bulma, Bootstrap, Foundation, Fomantic UI, and DaisyUI.
+
+Other public projects:
+
+- [OpenHand](https://github.com/fsecada01/openhand): a benefits and mutual-aid navigator. You describe your situation in plain language and it screens for SNAP, Medicaid/CHIP, Medicare, and EITC. The LLM extracts facts and explains results; it does not decide eligibility. It grew out of my MPA background in Medicaid policy.
+- [reports-ai](https://github.com/fsecada01/reports-ai): a Django app that turns Git commit history into LLM-written summary reports. Alpha.
+
+Questions about any of these are welcome as issues on the relevant repository.
