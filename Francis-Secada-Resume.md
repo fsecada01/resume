@@ -48,7 +48,7 @@ Independent consultancy building software for startups, small businesses, and no
 - Owned the migration of a monolithic Django application to modular microservices using FastAPI on Azure Functions behind API Management, improving scalability for high-volume healthcare data workflows.
 - Engineered REST APIs for complex medical data queries using PostgreSQL indexing, window functions, and views; implemented Redis-based caching and asynchronous FastAPI endpoints.
 - Tuned ETL and cohort-generation pipelines with Pandas and PostgreSQL query optimization.
-- Partnered with clinical teams to meet HIPAA/HITECH requirements, implementing secure data-access patterns and audit logging for sensitive healthcare information.
+- Partnered with clinical teams on HIPAA/HITECH requirements, implementing secure data-access patterns and audit logging.
 
 ### HSBC
 
@@ -56,8 +56,7 @@ Independent consultancy building software for startups, small businesses, and no
 
 - Led the re-architecture of a global cybersecurity control platform from a Django monolith into containerized microservices on AWS ECS, with event-driven Lambda functions for compliance monitoring.
 - Built REST APIs with Flask and FastAPI for financial risk analysis, using PostgreSQL CTEs and window functions to serve real-time regulatory reporting dashboards.
-- Built TypeScript React and Vue.js components that consume real-time market data and compliance APIs.
-- Set up Prometheus and Grafana monitoring for API health, error rates, and latency.
+- Built TypeScript React and Vue.js components on real-time market data and compliance APIs, and set up Prometheus and Grafana monitoring for API health and latency.
 - Mentored junior engineers on test-driven development, Git branching, and financial systems work, and contributed to hiring two of them.
 
 ## Selected Projects
@@ -79,6 +78,8 @@ Independent consultancy building software for startups, small businesses, and no
 **Ranked Jobs** ([rankedjobs.com](https://www.rankedjobs.com/)) - Job-search platform that ranks postings with NLP; its API microservice aggregates 12 sources through a plugin system, with Taskiq workers and Prometheus metrics. *(Python, FastAPI, Django, PostgreSQL, Redis)*
 
 **AccountBridge** - Household budgeting app on a provider-agnostic OAuth account-linking core (Plaid, Teller), with an MCP server exposing 14 financial-data tools to Claude. *(Python, Litestar, MCP, OAuth)*
+
+**OpenHand** ([GitHub](https://github.com/fsecada01/openhand)) - Benefits screener for SNAP, Medicaid/CHIP, Medicare, and EITC. An LLM extracts facts and explains results; a deterministic rules engine with no LLM imports decides eligibility. 78 tests. *(Python, FastAPI, LLM)*
 
 **Formana** - Django platform automating New York State's Medicaid waiver programs, with HIPAA/HITECH controls and GPT-4o-generated clinical narratives. *(Python, Django Ninja, Celery, PostgreSQL)*
 
